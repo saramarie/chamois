@@ -1,0 +1,22 @@
+.Card {
+  background: #fff;
+  color: #666;
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 2px;
+  box-shadow: -2px 2px 10px rgba(200, 200, 200, .2);
+  box-sizing: border-box;
+
+  &--fullBleed {
+    padding: 0; // turn off default padding
+  }
+
+  &--oneHalf {
+    width: 48%;
+  }
+
+  &--oneThird {
+    width: 32%;
+  }
+}

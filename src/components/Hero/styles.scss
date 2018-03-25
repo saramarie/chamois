@@ -1,0 +1,36 @@
+.Hero {
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  padding: 3rem 0 3.5rem;
+
+  &-container {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  &-title {
+    color: #333;
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  &-title,
+  &-text {
+    margin: 0 0 1rem;
+  }
+
+  &-text {
+    line-height: 1.6;
+    margin-bottom: 1.5rem; // override margin on text elements
+  }
+
+  &--centered {
+    text-align: center;
+  }
+
+  &--bgGray {
+    background: #f6f6f6;
+  }
+}

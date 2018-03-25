@@ -1,0 +1,47 @@
+.ArticlePreview {
+  &-date,
+  &-text {
+    color: #666;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  &-date {
+    font-size: .8rem;
+    margin: 0;
+  }
+
+  &-header {
+    font-family: 'Merriweather', serif;
+  }
+
+  &-title {
+    line-height: 1.4;
+    margin: 0 0 .5rem;
+
+    &,
+    &-link {
+      color: #00418c;
+    }
+
+    &-link {
+      text-decoration: none; // override browser default
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-text {
+    margin: 0 0 1rem;
+  }
+
+  &--oneHalf {
+    width: 48%;
+  }
+
+  &--oneThird {
+    width: 32%;
+  }
+}

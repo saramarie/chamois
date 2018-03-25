@@ -1,0 +1,10 @@
+.Footer {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem 0 1.5rem;
+  display: flex;
+
+  &--center {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,17 @@
+.ArticlePreviewSection {
+  padding: 3rem 0 3.5rem;
+
+  &-title {
+    color: #333;
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 2.5rem;
+  }
+
+  &-articles {
+    display: flex;
+    justify-content: space-between;
+  }
+}
