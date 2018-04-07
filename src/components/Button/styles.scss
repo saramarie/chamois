@@ -6,7 +6,7 @@
   font-weight: 300;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: 0;
   border-radius: 2px;
   position: relative;
@@ -15,7 +15,7 @@
   &,
   &:hover,
   &:active {
-    transition: background .3s ease;
+    transition: background 0.3s ease;
   }
 
   &:hover,
@@ -28,7 +28,7 @@
   }
 
   &:focus {
-    outline: 2px solid rgba(80, 160, 255, .8);
+    outline: 2px solid rgba(#50a0ff, 0.8);
     outline-offset: 2px;
   }
 }

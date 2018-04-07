@@ -1,0 +1,51 @@
+.TextField {
+  $component: &;
+
+  color: #444;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0.75rem 0.5rem;
+  position: relative;
+
+  &:focus-within {
+    border-color: #50a0ff;
+  }
+
+  &-label,
+  &-input {
+    display: block;
+  }
+
+  &-input {
+    background: transparent;
+    color: #666;
+    font-size: 1rem;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    position: relative;
+    left: -1px;
+
+    &:focus,
+    #{$component}.has-value & {
+      transform: translateY(40%);
+    }
+  }
+
+  &-label {
+    transition: transform 0.1s ease-in, font-size 0.1s ease-in;
+    pointer-events: none;
+    position: absolute;
+    transform: translateY(-90%);
+
+    #{$component}-input:focus + &,
+    #{$component}.has-value & {
+      color: #666;
+      font-size: 0.8rem;
+      transition-timing-function: ease-out, ease-out;
+      transform: translateY(-170%);
+    }
+  }
+}
