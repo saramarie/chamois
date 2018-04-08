@@ -1,4 +1,23 @@
+@mixin ghost_button(
+  $color: #00418c,
+  $color--hover: desaturate(lighten(#00418c, 10%), 20%)
+) {
+  background: transparent;
+  color: $color;
+  font-weight: 400;
+  border-color: $color;
+
+  &:hover,
+  &:active {
+    background: $color--hover;
+    color: #fff;
+    border-color: $color--hover;
+  }
+}
+
 .Button {
+  $component: &;
+
   background: #00418c;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
@@ -7,8 +26,8 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
-  border: 0;
-  border-radius: 2px;
+  border: 2px solid transparent;
+  border-radius: 3px;
   position: relative;
   cursor: pointer;
 
@@ -30,5 +49,22 @@
   &:focus {
     outline: 2px solid rgba(#50a0ff, 0.8);
     outline-offset: 2px;
+  }
+
+  &--ghost {
+    @include ghost_button();
+  }
+
+  &--secondary {
+    background: #007e8a;
+
+    &:hover,
+    &:active {
+      background: desaturate(lighten(#007e8a, 10%), 20%);
+    }
+
+    &#{$component}--ghost {
+      @include ghost_button(#007e8a, desaturate(lighten(#007e8a, 10%), 20%));
+    }
   }
 }
