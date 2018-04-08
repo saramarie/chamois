@@ -18,6 +18,7 @@ const TextField = props => (
       id={props.id}
       name={props.name}
       value={props.value}
+      onChange={props.onChange}
     />
     <label className="TextField-label" htmlFor={props.id}>
       {props.label}
@@ -31,11 +32,13 @@ TextField.propTypes = {
   name: PropTypes.string,
   type: PropTypes.oneOf(['text', 'email', 'number']),
   value: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 TextField.defaultProps = {
   name: '',
   value: '',
+  onChange: () => {},
 };
 
 export default TextField;

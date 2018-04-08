@@ -1,0 +1,14 @@
+.PageBlock {
+  padding: 3rem 1rem 3.5rem;
+  box-sizing: border-box;
+
+  &-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  &--gray {
+    background: #f6f6f6;
+  }
+}

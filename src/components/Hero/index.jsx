@@ -1,46 +1,41 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cn from 'classnames'
-import 'typeface-open-sans'
-import 'typeface-merriweather'
+import React from 'react';
+import PropTypes from 'prop-types';
+import cn from 'classnames';
+import 'typeface-open-sans';
+import 'typeface-merriweather';
 
-import Button from '../Button'
-import './styles.css'
+import PageBlock from '../PageBlock';
+import Button from '../Button';
+import './styles.css';
+
+const heroClasses = props =>
+  cn('Hero', {
+    'Hero--centered': props.center,
+  });
 
 const Hero = props => {
-  const heroClasses = cn('Hero', {
-    'Hero--centered': props.center,
-    'Hero--bgGray': props.background === 'gray'
-  })
-
   return (
-    <div className={heroClasses}>
-      <div className="Hero-container">
-        <h2 className="Hero-title">
-          {props.title}
-        </h2>
+    <PageBlock background={props.background}>
+      <div className={heroClasses(props)}>
+        <h2 className="Hero-title">{props.title}</h2>
 
-        <p className="Hero-text">
-          {props.text}
-        </p>
+        <p className="Hero-text">{props.text}</p>
 
-        <Button>
-          {props.ctaText}
-        </Button>
+        <Button>{props.ctaText}</Button>
       </div>
-    </div>
-  )
-}
+    </PageBlock>
+  );
+};
 
 Hero.propTypes = {
-  background: PropTypes.oneOf(['gray']),
   title: PropTypes.string,
   text: PropTypes.string,
   ctaText: PropTypes.string,
-}
+  center: PropTypes.bool,
+};
 
 Hero.defaultProps = {
-  background: null,
-}
+  center: false,
+};
 
-export default Hero
+export default Hero;

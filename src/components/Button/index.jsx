@@ -12,7 +12,11 @@ const buttonClasses = props =>
   });
 
 const Button = props => (
-  <button type="button" className={buttonClasses(props)}>
+  <button
+    type={props.type}
+    onClick={props.onClick}
+    className={buttonClasses(props)}
+  >
     {props.text || props.children}
   </button>
 );
@@ -23,12 +27,14 @@ Button.propTypes = {
   children: PropTypes.node,
   secondary: PropTypes.bool,
   ghost: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   type: 'text',
   secondary: false,
   ghost: false,
+  onClick: () => {},
 };
 
 export default Button;
