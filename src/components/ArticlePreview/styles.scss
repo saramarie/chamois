@@ -1,4 +1,6 @@
 .ArticlePreview {
+  width: 100%;
+
   &-date,
   &-text {
     color: #666;
@@ -6,7 +8,7 @@
   }
 
   &-date {
-    font-size: .8rem;
+    font-size: 0.8rem;
     margin: 0;
   }
 
@@ -16,7 +18,7 @@
 
   &-title {
     line-height: 1.4;
-    margin: 0 0 .5rem;
+    margin: 0 0 0.5rem;
 
     &,
     &-link {
@@ -37,11 +39,13 @@
     margin: 0 0 1rem;
   }
 
-  &--oneHalf {
-    width: 48%;
-  }
+  @media (min-width: 1024px) {
+    &--oneHalf {
+      width: 48%;
+    }
 
-  &--oneThird {
-    width: 32%;
+    &--oneThird {
+      width: 32%;
+    }
   }
 }

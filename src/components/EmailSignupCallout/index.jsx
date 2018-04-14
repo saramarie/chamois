@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import PageBlock from '../PageBlock';
 import EmailSignup from '../EmailSignup';

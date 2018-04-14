@@ -1,0 +1,21 @@
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &-item {
+    margin: 0.5rem;
+    display: flex;
+  }
+}
+
+@for $i from 1 through 12 {
+  $width: percentage($i / 12);
+
+  .u-cols#{$i} {
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      width: calc(#{$width} - 1rem);
+    }
+  }
+}
