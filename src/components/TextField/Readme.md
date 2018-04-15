@@ -5,3 +5,7 @@
 ```js
 <TextField label="Test" type="text" id="test" />
 ```
+
+```js
+<TextField label="Test" type="text" id="test" value="Invalid input" error />
+```

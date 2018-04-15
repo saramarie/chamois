@@ -9,6 +9,7 @@ $dove_gray: #666;
 $mine_shaft: #333;
 $congress_blue: #00418c;
 $blue_lagoon: #007e8a;
+$milano_red: #bd2300;
 
 /**
  * Functions
@@ -26,6 +27,7 @@ $blue_lagoon: #007e8a;
 $theme--white: $white;
 $theme--primary: $congress_blue;
 $theme--secondary: $blue_lagoon;
+$theme--error: $milano_red;
 
 // Backgrounds
 $bg: $white;
@@ -39,6 +41,7 @@ $text--light: $theme--white;
 $text--dark: $mine_shaft;
 $text--primary: $theme--primary;
 $text--secondary: $theme--secondary;
+$text--error: $theme--error;
 
 // Buttons
 $button--primary: $theme--primary;

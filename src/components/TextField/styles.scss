@@ -4,8 +4,9 @@
 .TextField {
   $component: &;
 
-  &,
-  &-input {
+  &-input,
+  &-label,
+  &-errorMsg {
     @include typography-base();
   }
 
@@ -17,6 +18,10 @@
   position: relative;
   box-sizing: border-box;
   cursor: text;
+
+  &.has-error {
+    border-color: $theme--error;
+  }
 
   &:focus-within {
     border-color: $focus;
@@ -52,6 +57,17 @@
       font-size: $font-size--small;
       transition-timing-function: ease-out, ease-out;
       transform: translateY(0.2rem);
+    }
+  }
+
+  &-errorMsg {
+    color: $theme--error;
+    font-size: $font-size--small;
+    margin: 0.5rem 0.5rem 0;
+    display: none;
+
+    #{$component}.has-error + & {
+      display: block;
     }
   }
 }
