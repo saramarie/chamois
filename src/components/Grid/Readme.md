@@ -7,16 +7,16 @@ const itemStyle = {
 };
 
 <Grid gutters>
-  <Grid item largeCols="3" smallCols="6">
+  <Grid item largeCols={3} smallCols={6}>
     <div style={itemStyle} />
   </Grid>
-  <Grid item largeCols="9" smallCols="6">
+  <Grid item largeCols={9} smallCols={6}>
     <div style={itemStyle} />
   </Grid>
-  <Grid item largeCols="6" smallCols="6">
+  <Grid item largeCols={6} smallCols={6}>
     <div style={itemStyle} />
   </Grid>
-  <Grid item largeCols="6" smallCols="6">
+  <Grid item largeCols={6} smallCols={6}>
     <div style={itemStyle} />
   </Grid>
 </Grid>;

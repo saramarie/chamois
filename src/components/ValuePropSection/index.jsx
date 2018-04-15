@@ -10,7 +10,7 @@ const ValuePropSection = ({ valueProps, columns, center }) => (
     <div className="ValuePropSection-container">
       <Grid>
         {valueProps.map(valueProp => (
-          <Grid item largeCols={12 / columns}>
+          <Grid key={valueProp.id} item largeCols={12 / columns}>
             <ValueProp
               key={valueProp.id}
               title={valueProp.title}
