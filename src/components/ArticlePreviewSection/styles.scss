@@ -1,8 +1,10 @@
+@import '../../sass/variables/colors';
+
 .ArticlePreviewSection {
   padding: 3rem 0 3.5rem;
 
   &-title {
-    color: #333;
+    color: $text--dark;
     font-family: 'Merriweather', serif;
     font-size: 2rem;
     font-weight: 400;

@@ -1,3 +1,5 @@
+@import '../../sass/variables/colors';
+
 .PageBlock {
   padding: 3rem 1rem 3.5rem;
   box-sizing: border-box;
@@ -9,6 +11,6 @@
   }
 
   &--gray {
-    background: #f6f6f6;
+    background: $bg--light;
   }
 }

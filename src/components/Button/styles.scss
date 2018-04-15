@@ -1,7 +1,6 @@
-@mixin ghost_button(
-  $color: #00418c,
-  $color--hover: desaturate(lighten(#00418c, 10%), 20%)
-) {
+@import '../../sass/variables/colors';
+
+@mixin ghost_button($color: $button--primary, $color--hover: $hover--primary) {
   background: transparent;
   color: $color;
   font-weight: 400;
@@ -18,8 +17,8 @@
 .Button {
   $component: &;
 
-  background: #00418c;
-  color: #fff;
+  background: $button--primary;
+  color: $text--light;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -40,7 +39,7 @@
 
   &:hover,
   &:active {
-    background: desaturate(lighten(#00418c, 10%), 20%);
+    background: $hover--primary;
   }
 
   &:active {
@@ -48,7 +47,7 @@
   }
 
   &:focus {
-    outline: 2px solid rgba(#50a0ff, 0.8);
+    outline: 2px solid $focus;
     outline-offset: 2px;
   }
 
@@ -57,15 +56,15 @@
   }
 
   &--secondary {
-    background: #007e8a;
+    background: $button--secondary;
 
     &:hover,
     &:active {
-      background: desaturate(lighten(#007e8a, 10%), 20%);
+      background: $hover--secondary;
     }
 
     &#{$component}--ghost {
-      @include ghost_button(#007e8a, desaturate(lighten(#007e8a, 10%), 20%));
+      @include ghost_button($button--secondary, $hover--secondary);
     }
   }
 }

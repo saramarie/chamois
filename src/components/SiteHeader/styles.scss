@@ -1,5 +1,7 @@
+@import '../../sass/variables/colors';
+
 .SiteHeader {
-  background: #fff;
+  background: $bg;
   padding: 1.5rem 0 2rem;
 
   &-container {
@@ -11,7 +13,7 @@
   }
 
   &-logo {
-    color: #00418c;
+    color: $text--primary;
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
     font-weight: 700;
@@ -23,7 +25,7 @@
       text-decoration: none;
 
       &:focus {
-        outline: 2px solid rgba(#50a0ff, 0.8);
+        outline: 2px solid $focus;
       }
     }
   }

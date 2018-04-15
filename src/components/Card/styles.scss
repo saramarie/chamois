@@ -1,12 +1,14 @@
+@import '../../sass/variables/colors';
+
 .Card {
-  background: #fff;
-  color: #666;
+  background: $bg;
+  color: $text;
   font-family: 'Merriweather', serif;
   font-size: 1rem;
   padding: 1rem;
-  border: 1px solid #f6f6f6;
+  border: 1px solid $border;
   border-radius: 3px;
-  box-shadow: -2px 2px 10px rgba(200, 200, 200, 0.2);
+  box-shadow: -2px 2px 10px $shadow;
   box-sizing: border-box;
 
   &--fullBleed {

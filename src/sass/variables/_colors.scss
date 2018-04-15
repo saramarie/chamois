@@ -1,0 +1,56 @@
+/**
+ * Crayon Box Colors
+ */
+
+$white: #fff;
+$wild_sand: #f6f6f6;
+$silver: #c8c8c8;
+$dove_gray: #666;
+$mine_shaft: #333;
+$congress_blue: #00418c;
+$blue_lagoon: #007e8a;
+
+/**
+ * Functions
+ */
+
+@function hover-color($color) {
+  @return desaturate(lighten($color, 10%), 20%);
+}
+
+/**
+ * Theme Colors
+ */
+
+// Theme base
+$theme--white: $white;
+$theme--primary: $congress_blue;
+$theme--secondary: $blue_lagoon;
+
+// Backgrounds
+$bg: $white;
+$bg--light: $wild_sand;
+$bg--primary: $theme--primary;
+$bg--secondary: $theme--secondary;
+
+// Typography
+$text: $dove_gray;
+$text--light: $theme--white;
+$text--dark: $mine_shaft;
+$text--primary: $theme--primary;
+$text--secondary: $theme--secondary;
+
+// Buttons
+$button--primary: $theme--primary;
+$button--secondary: $theme--secondary;
+
+// Hover states
+$hover--primary: hover-color($theme--primary);
+$hover--secondary: hover-color($theme--secondary);
+
+// Borders
+$border: $wild_sand;
+
+// Miscellany
+$shadow: rgba($silver, 0.2);
+$focus: rgba(lighten($theme--primary, 40%), 0.8);

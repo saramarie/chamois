@@ -1,8 +1,10 @@
+@import '../../sass/variables/colors';
+
 .TextField {
   $component: &;
 
-  background: #fff;
-  color: #444;
+  background: $bg;
+  color: $text--dark;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   height: 3rem;
@@ -14,7 +16,7 @@
   cursor: text;
 
   &:focus-within {
-    border-color: #50a0ff;
+    border-color: $focus;
   }
 
   &-label,
@@ -24,7 +26,7 @@
 
   &-input {
     background: transparent;
-    color: #666;
+    color: $text;
     font-size: 1rem;
     width: calc(100% - 1rem);
     border: 0;
@@ -44,7 +46,7 @@
 
     #{$component}-input:focus + &,
     #{$component}.has-value & {
-      color: #666;
+      color: $text;
       font-size: 0.8rem;
       transition-timing-function: ease-out, ease-out;
       transform: translateY(0.2rem);
