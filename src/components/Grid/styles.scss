@@ -1,3 +1,13 @@
+@mixin build-columns($number, $size) {
+  @for $i from 1 through $number {
+    $width: percentage($i / 12);
+
+    .u-#{$size}-cols#{$i} {
+      width: calc(#{$width} - 1rem);
+    }
+  }
+}
+
 .Grid {
   display: flex;
   flex-wrap: wrap;
@@ -8,14 +18,8 @@
   }
 }
 
-@for $i from 1 through 12 {
-  $width: percentage($i / 12);
+@include build-columns(12, 'sm');
 
-  .u-cols#{$i} {
-    width: 100%;
-
-    @media (min-width: 1024px) {
-      width: calc(#{$width} - 1rem);
-    }
-  }
+@media (min-width: 1024px) {
+  @include build-columns(12, 'lg');
 }

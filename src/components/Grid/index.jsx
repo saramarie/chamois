@@ -8,7 +8,8 @@ const gridClasses = props =>
   cn({
     Grid: !props.item,
     'Grid-item': props.item,
-    [`u-cols${props.cols}`]: props.cols && props.item,
+    [`u-lg-cols${props.largeCols}`]: props.largeCols && props.item,
+    [`u-sm-cols${props.smallCols}`]: props.smallCols && props.item,
   });
 
 const Grid = props => (
@@ -18,12 +19,14 @@ const Grid = props => (
 Grid.propTypes = {
   children: PropTypes.node.isRequired,
   item: PropTypes.bool,
-  cols: PropTypes.number,
+  largeCols: PropTypes.number,
+  smallCols: PropTypes.number,
 };
 
 Grid.defaultProps = {
   item: false,
-  cols: 12,
+  largeCols: 12,
+  smallCols: 12,
 };
 
 export default Grid;
