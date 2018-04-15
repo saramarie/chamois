@@ -1,39 +1,29 @@
 @import '../../sass/variables/colors';
+@import '../../sass/variables/typography';
 
 .ArticlePreview {
   width: 100%;
 
   &-date,
   &-text {
-    color: $text;
-    font-family: 'Open Sans', sans-serif;
+    @include typography-base();
   }
 
   &-date {
-    font-size: 0.8rem;
+    font-size: $font-size--small;
     margin: 0;
   }
 
   &-header {
-    font-family: 'Merriweather', serif;
+    font-family: $font--heading;
   }
 
   &-title {
     line-height: 1.4;
     margin: 0 0 0.5rem;
 
-    &,
     &-link {
-      color: $text--primary;
-    }
-
-    &-link {
-      text-decoration: none; // override browser default
-
-      &:hover,
-      &:active {
-        text-decoration: underline;
-      }
+      @include typography-link();
     }
   }
 

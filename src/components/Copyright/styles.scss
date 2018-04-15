@@ -1,7 +1,6 @@
-@import '../../sass/variables/colors';
+@import '../../sass/variables/typography';
 
 .Copyright {
-  color: $text;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.9rem;
+  @include typography-base();
+  font-size: $font-size--small; // override base font size
 }

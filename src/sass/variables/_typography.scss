@@ -1,0 +1,57 @@
+@import 'colors';
+
+/**
+ * Variables
+ */
+
+// Font families
+$font: 'Open Sans', sans-serif;
+$font--heading: 'Merriweather', serif;
+
+// Font sizes
+$font-size: 1rem;
+$font-size--small: 0.8rem;
+$font-size--medium: 1.25rem;
+$font-size--large: 2rem;
+
+/**
+ * Mixins
+ */
+
+@mixin typography-base() {
+  color: $text;
+  font-family: $font;
+  font-size: $font-size;
+}
+
+@mixin typography-heading($size: null) {
+  $heading-size: $font-size--large;
+
+  @if $size == 'small' {
+    $heading-size: $font-size--medium;
+  }
+
+  color: $text--dark;
+  font-family: $font--heading;
+  font-size: $heading-size;
+  font-weight: 400; // override heading tag browser default
+}
+
+@mixin typography-link() {
+  color: $text--primary;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+@mixin typography-button() {
+  color: $text--light;
+  font-family: $font;
+  font-size: $font-size;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

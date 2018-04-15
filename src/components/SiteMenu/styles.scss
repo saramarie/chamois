@@ -1,11 +1,9 @@
 @import '../../sass/variables/colors';
+@import '../../sass/variables/typography';
 
 .SiteMenu {
   &-item {
-    color: $text;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
+    @include typography-base();
     text-decoration: none;
     padding: 0.5rem 0.75rem;
 

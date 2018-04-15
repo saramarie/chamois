@@ -1,6 +1,8 @@
 @import '../../sass/variables/colors';
+@import '../../sass/variables/typography';
 
 @mixin ghost_button($color: $button--primary, $color--hover: $hover--primary) {
+  // These styles override base button styles
   background: transparent;
   color: $color;
   font-weight: 400;
@@ -16,14 +18,9 @@
 
 .Button {
   $component: &;
+  @include typography-button();
 
   background: $button--primary;
-  color: $text--light;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   height: 3rem; // match height of inputs
   padding: 0.6rem 1rem;
   border: 2px solid transparent;
