@@ -14,7 +14,7 @@ const ArticlePreviewSection = ({ articlePreviews, columns }) => (
     <div className="ArticlePreviewSection-articles">
       <Grid>
         {articlePreviews.map(preview => (
-          <Grid item largeCols="4">
+          <Grid item largeCols={12 / columns}>
             <Card>
               <ArticlePreview
                 datePublished={preview.datePublished}
