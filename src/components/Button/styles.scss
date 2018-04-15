@@ -1,5 +1,5 @@
-@import '../../sass/variables/colors';
-@import '../../sass/variables/typography';
+@import '../../sass/colors';
+@import '../../sass/typography';
 
 @mixin ghost_button($color: $button--primary, $color--hover: $hover--primary) {
   // These styles override base button styles
