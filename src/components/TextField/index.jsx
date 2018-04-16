@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import 'typeface-open-sans';
 
+import FieldError from '../FieldError';
 import './styles.css';
 
 const textFieldClasses = props =>
@@ -26,7 +27,7 @@ const TextField = props => (
         {props.label}
       </label>
     </div>
-    {props.error && <p className="TextField-errorMsg">{props.error}</p>}
+    {props.error && <FieldError message={props.error} />}
   </Fragment>
 );
 

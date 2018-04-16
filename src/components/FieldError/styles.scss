@@ -1,0 +1,9 @@
+@import '../../sass/colors';
+@import '../../sass/typography';
+
+.FieldError {
+  font-family: $font;
+  color: $theme--error;
+  font-size: $font-size--small;
+  margin: 0.5rem 0 0;
+}

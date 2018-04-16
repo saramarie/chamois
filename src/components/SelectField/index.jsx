@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import 'typeface-open-sans';
 
+import FieldError from '../FieldError';
 import ChevronIcon from './assets/chevron.svg';
 import './styles.css';
 
@@ -37,9 +38,7 @@ const SelectField = props => (
         <use xlinkHref={`${ChevronIcon}#chevron`} />
       </svg>
     </div>
-    {props.error && (
-      <p className="SelectField-errorMsg">This is an error message</p>
-    )}
+    {props.error && <FieldError message={props.error} />}
   </Fragment>
 );
 

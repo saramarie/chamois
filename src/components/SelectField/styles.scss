@@ -52,10 +52,4 @@
     transform: translateY(100%);
     pointer-events: none;
   }
-
-  &-errorMsg {
-    color: $theme--error;
-    font-size: $font-size--small;
-    margin: 0.5rem 0 0;
-  }
 }
