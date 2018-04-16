@@ -19,11 +19,11 @@
   cursor: text;
 
   &.has-error {
-    border-color: $theme--error;
+    border-color: $border--error;
   }
 
   &:focus-within {
-    border-color: $focus;
+    outline: 2px solid $focus;
   }
 
   &-label,
