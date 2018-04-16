@@ -1,0 +1,61 @@
+@import '../../sass/colors';
+@import '../../sass/typography';
+
+.SelectField {
+  background: $bg;
+  height: 3rem;
+  border: 1px solid $border;
+  border-radius: 3px;
+  position: relative;
+  box-sizing: border-box;
+
+  &.has-error {
+    border-color: $theme--error;
+  }
+
+  &:focus-within {
+    border-color: $focus;
+  }
+
+  &-input,
+  &-label,
+  &-errorMsg {
+    @include typography-base();
+  }
+
+  &-input {
+    background: transparent;
+    width: 100%;
+    padding: 1.3rem 0.5rem 0.2rem;
+    border: 0;
+    appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-label {
+    font-size: $font-size--small;
+    position: absolute;
+    top: 0.2rem;
+    left: 0.5rem;
+  }
+
+  &-icon {
+    fill: $text--dark;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 0;
+    transform: translateY(100%);
+    pointer-events: none;
+  }
+
+  &-errorMsg {
+    color: $theme--error;
+    font-size: $font-size--small;
+    margin: 0.5rem 0 0;
+  }
+}

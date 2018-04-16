@@ -26,7 +26,7 @@ const TextField = props => (
         {props.label}
       </label>
     </div>
-    <p className="TextField-errorMsg">This is an error message</p>
+    {props.error && <p className="TextField-errorMsg">{props.error}</p>}
   </Fragment>
 );
 
@@ -37,14 +37,14 @@ TextField.propTypes = {
   type: PropTypes.oneOf(['text', 'email', 'number']),
   value: PropTypes.string,
   onChange: PropTypes.func,
-  error: PropTypes.bool,
+  error: PropTypes.string,
 };
 
 TextField.defaultProps = {
   name: '',
   value: '',
   onChange: () => {},
-  error: false,
+  error: '',
 };
 
 export default TextField;

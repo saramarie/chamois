@@ -7,5 +7,11 @@
 ```
 
 ```js
-<TextField label="Test" type="text" id="test" value="Invalid input" error />
+<TextField
+  label="Test"
+  type="text"
+  id="test"
+  value="Invalid input"
+  error="There is an error"
+/>
 ```

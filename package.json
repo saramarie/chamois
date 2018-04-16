@@ -11,7 +11,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1",
-    "react-styleguidist": "^6.2.7",
+    "react-styleguidist": "^7.0.5",
     "react-test-renderer": "^16.2.0",
     "source-map-explorer": "^1.5.0",
     "typeface-karma": "^0.0.54",
@@ -19,8 +19,10 @@
     "typeface-open-sans": "^0.0.54"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "build-css":
+      "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css":
+      "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "precommit": "pretty-quick --staged",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",

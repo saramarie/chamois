@@ -63,11 +63,6 @@
   &-errorMsg {
     color: $theme--error;
     font-size: $font-size--small;
-    margin: 0.5rem 0.5rem 0;
-    display: none;
-
-    #{$component}.has-error + & {
-      display: block;
-    }
+    margin: 0.5rem 0 0;
   }
 }
