@@ -35,7 +35,7 @@ TextField.propTypes = {
   label: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
-  type: PropTypes.oneOf(['text', 'email', 'number']),
+  type: PropTypes.oneOf(['text', 'name', 'email', 'number']),
   value: PropTypes.string,
   onChange: PropTypes.func,
   error: PropTypes.string,
