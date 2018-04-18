@@ -1,0 +1,14 @@
+@import '../../sass/typography';
+
+.SectionTitle {
+  @include typography-heading();
+  margin: 0;
+
+  &--center {
+    text-align: center;
+  }
+
+  &--marginBottom {
+    margin-bottom: 2.5rem;
+  }
+}

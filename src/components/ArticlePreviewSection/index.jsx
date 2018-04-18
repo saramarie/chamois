@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import 'typeface-merriweather';
 
+import SectionTitle from '../SectionTitle';
 import Grid from '../Grid';
 import Card from '../Card';
 import ArticlePreview from '../ArticlePreview';
@@ -9,7 +10,7 @@ import './styles.css';
 
 const ArticlePreviewSection = ({ articlePreviews, columns }) => (
   <section className="ArticlePreviewSection">
-    <h2 className="ArticlePreviewSection-title">Articles</h2>
+    <SectionTitle title="Articles" center marginBottom />
 
     <div className="ArticlePreviewSection-articles">
       <Grid>

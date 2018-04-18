@@ -38,7 +38,7 @@ class ContactForm extends Component {
           <TextField label="Your Name" type="name" id="name" name="name" />
         </fieldset>
         <fieldset className="ContactForm-field">
-          <SelectField label="Inquiring About" options={options} />
+          <SelectField id="inquiry" label="Inquiring About" options={options} />
         </fieldset>
         <fieldset className="ContactForm-field">
           <BoxField id="message" name="message" label="Leave a Message" />

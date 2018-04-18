@@ -5,6 +5,7 @@ import 'typeface-open-sans';
 import 'typeface-merriweather';
 
 import PageBlock from '../PageBlock';
+import SectionTitle from '../SectionTitle';
 import Button from '../Button';
 import './styles.css';
 
@@ -17,7 +18,7 @@ const Hero = props => {
   return (
     <PageBlock background={props.background}>
       <div className={heroClasses(props)}>
-        <h2 className="Hero-title">{props.title}</h2>
+        <SectionTitle title={props.title} center={props.center} marginBottom />
 
         <p className="Hero-text">{props.text}</p>
 

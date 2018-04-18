@@ -9,7 +9,6 @@ const options = [
     id: 2,
     value: 'green',
     label: 'Green',
-    selected: true,
   },
   {
     id: 3,
@@ -18,7 +17,12 @@ const options = [
   },
 ];
 
-<SelectField label="Color Options" options={options} />;
+<SelectField
+  id="color_ex1"
+  label="Color Options"
+  options={options}
+  value="green"
+/>;
 ```
 
 ```js
@@ -32,7 +36,6 @@ const options = [
     id: 2,
     value: 'green',
     label: 'Green',
-    selected: true,
   },
   {
     id: 3,
@@ -43,6 +46,7 @@ const options = [
 
 <SelectField
   label="Color Options"
+  id="color_ex3"
   options={options}
   error="There is an error"
 />;

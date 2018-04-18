@@ -43,7 +43,7 @@
   }
 
   &-label {
-    color: $text--dark;
+    color: $text;
     transition: transform 0.1s ease-in, font-size 0.1s ease-in;
     pointer-events: none;
     position: absolute;
@@ -53,7 +53,6 @@
 
     #{$component}-input:focus + &,
     #{$component}.has-value & {
-      color: $text;
       font-size: $font-size--small;
       transition-timing-function: ease-out, ease-out;
       transform: translateY(0.2rem);

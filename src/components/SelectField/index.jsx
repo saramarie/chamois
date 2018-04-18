@@ -20,13 +20,10 @@ const SelectField = props => (
         id={props.id}
         name={props.name}
         onChange={props.onChange}
+        value={props.value}
       >
         {props.options.map(option => (
-          <option
-            key={option.id}
-            value={option.value}
-            selected={option.selected}
-          >
+          <option key={option.id} value={option.value}>
             {option.label}
           </option>
         ))}
