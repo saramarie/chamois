@@ -15,3 +15,11 @@
   error="There is an error"
 />
 ```
+
+```js
+<TextField label="Name" type="text" id="name" value="Jane Doe" disabled />
+```
+
+```js
+<TextField label="Name" type="text" id="name" disabled />
+```

@@ -18,10 +18,6 @@
   box-sizing: border-box;
   cursor: text;
 
-  &.has-error {
-    border-color: $border--error;
-  }
-
   &:focus-within {
     outline: 2px solid $focus;
   }
@@ -52,10 +48,23 @@
     transform: translateY(0.8rem);
 
     #{$component}-input:focus + &,
-    #{$component}.has-value & {
+    .has-value & {
       font-size: $font-size--small;
       transition-timing-function: ease-out, ease-out;
       transform: translateY(0.2rem);
     }
+  }
+
+  &.has-error {
+    border-color: $border--error;
+  }
+
+  &.is-disabled {
+    background: #e6e6e6;
+  }
+
+  .is-disabled &-input,
+  .is-disabled &-label {
+    color: #888;
   }
 }

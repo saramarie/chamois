@@ -10,6 +10,7 @@ const textFieldClasses = props =>
   cn('TextField', {
     'has-value': props.value,
     'has-error': props.error,
+    'is-disabled': props.disabled,
   });
 
 const TextField = props => (
@@ -22,6 +23,7 @@ const TextField = props => (
         name={props.name}
         value={props.value}
         onChange={props.onChange}
+        disabled={props.disabled}
       />
       <label className="TextField-label" htmlFor={props.id}>
         {props.label}
