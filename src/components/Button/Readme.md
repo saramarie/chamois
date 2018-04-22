@@ -3,6 +3,10 @@
 ```
 
 ```js
+<Button disabled>Disabled Button Text</Button>
+```
+
+```js
 <Button secondary>Button Text</Button>
 ```
 
@@ -14,4 +18,8 @@
 <Button secondary ghost>
   Button Text
 </Button>
+```
+
+```js
+<Button fullWidth>Full-Width Button Text</Button>
 ```

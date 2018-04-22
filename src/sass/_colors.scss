@@ -10,6 +10,9 @@ $mine_shaft: #333;
 $congress_blue: #00418c;
 $blue_lagoon: #007e8a;
 $milano_red: #bd2300;
+$forest_green: #429726;
+$christine: #da730b;
+$deep_cerulean: #0975b3;
 
 /**
  * Functions
@@ -28,12 +31,19 @@ $theme--white: $white;
 $theme--primary: $congress_blue;
 $theme--secondary: $blue_lagoon;
 $theme--error: $milano_red;
+$theme--success: $forest_green;
+$theme--warning: $christine;
+$theme--info: $deep_cerulean;
 
 // Backgrounds
 $bg: $white;
 $bg--light: $wild_sand;
 $bg--primary: $theme--primary;
 $bg--secondary: $theme--secondary;
+$bg--error: $theme--error;
+$bg--success: $theme--success;
+$bg--warning: $theme--warning;
+$bg--info: $theme--info;
 
 // Typography
 $text: $dove_gray;
@@ -42,6 +52,9 @@ $text--dark: $mine_shaft;
 $text--primary: $theme--primary;
 $text--secondary: $theme--secondary;
 $text--error: $theme--error;
+$text--success: $theme--success;
+$text--warning: $theme--warning;
+$text--info: $theme--info;
 
 // Buttons
 $button--primary: $theme--primary;
@@ -55,6 +68,9 @@ $hover--secondary: hover-color($theme--secondary);
 $border: $silver;
 $border--light: $wild_sand;
 $border--error: $theme--error;
+$border--success: $theme--success;
+$border--success: $theme--warning;
+$border--info: $theme--info;
 
 // Miscellany
 $shadow: rgba($silver, 0.2);

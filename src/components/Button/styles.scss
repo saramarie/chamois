@@ -51,6 +51,10 @@
     @include ghost_button();
   }
 
+  &--fullWidth {
+    width: 100%;
+  }
+
   &--secondary {
     background: $button--secondary;
 
@@ -62,5 +66,11 @@
     &#{$component}--ghost {
       @include ghost_button($button--secondary, $hover--secondary);
     }
+  }
+
+  &.is-disabled {
+    background: #e6e6e6;
+    color: #888;
+    border-color: #e6e6e6;
   }
 }

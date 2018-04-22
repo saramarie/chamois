@@ -1,0 +1,68 @@
+@import '../../sass/typography';
+@import '../../sass/colors';
+
+.AlertBanner {
+  @include typography-base();
+  background: $bg--light;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-dismiss {
+    background: transparent;
+    padding: 0;
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    box-sizing: content-box;
+    flex-shrink: 0;
+    cursor: pointer;
+    display: block;
+
+    &:focus {
+      outline: 2px solid $focus;
+    }
+
+    &-icon {
+      fill: $text;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-text {
+    margin: 0;
+  }
+
+  &--error,
+  &--success,
+  &--warning,
+  &--info {
+    color: $text--light;
+  }
+
+  &--error &-dismiss-icon,
+  &--success &-dismiss-icon,
+  &--warning &-dismiss-icon,
+  &--info &-dismiss-icon {
+    fill: $text--light;
+  }
+
+  &--error {
+    background: $bg--error;
+  }
+
+  &--success {
+    background: $bg--success;
+  }
+
+  &--warning {
+    background: $bg--warning;
+  }
+
+  &--info {
+    background: $bg--info;
+  }
+}
