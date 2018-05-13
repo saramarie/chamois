@@ -1,6 +1,24 @@
 @import '../../sass/typography';
 @import '../../sass/colors';
 
+$statuses: (
+  error: $bg--error,
+  warning: $bg--warning,
+  success: $bg--success,
+  info: $bg--info
+);
+
+@mixin alert-banner-statuses($status) {
+  &--#{$status} {
+    background: map-get($statuses, $status);
+    color: $text--light;
+  }
+
+  &--#{$status} &-dismiss-icon {
+    fill: $text--light;
+  }
+}
+
 .AlertBanner {
   @include typography-base();
   background: $bg--light;
@@ -36,33 +54,7 @@
     margin: 0;
   }
 
-  &--error,
-  &--success,
-  &--warning,
-  &--info {
-    color: $text--light;
-  }
-
-  &--error &-dismiss-icon,
-  &--success &-dismiss-icon,
-  &--warning &-dismiss-icon,
-  &--info &-dismiss-icon {
-    fill: $text--light;
-  }
-
-  &--error {
-    background: $bg--error;
-  }
-
-  &--success {
-    background: $bg--success;
-  }
-
-  &--warning {
-    background: $bg--warning;
-  }
-
-  &--info {
-    background: $bg--info;
+  @each $status, $bg-color in $statuses {
+    @include alert-banner-statuses($status);
   }
 }
