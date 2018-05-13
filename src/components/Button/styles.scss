@@ -55,6 +55,12 @@
     width: 100%;
   }
 
+  &--small {
+    font-size: 0.8rem;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+
   &--secondary {
     background: $button--secondary;
 
@@ -68,9 +74,10 @@
     }
   }
 
-  &.is-disabled {
+  &:disabled {
     background: #e6e6e6;
     color: #888;
     border-color: #e6e6e6;
+    cursor: inherit;
   }
 }

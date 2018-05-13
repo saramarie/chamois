@@ -10,7 +10,7 @@ const buttonClasses = props =>
     'Button--secondary': props.secondary,
     'Button--ghost': props.ghost,
     'Button--fullWidth': props.fullWidth,
-    'is-disabled': props.disabled,
+    'Button--small': props.small,
   });
 
 const Button = props => (
@@ -28,15 +28,19 @@ Button.propTypes = {
   type: PropTypes.string,
   text: PropTypes.string,
   children: PropTypes.node,
+  disabled: PropTypes.bool,
   secondary: PropTypes.bool,
   ghost: PropTypes.bool,
+  small: PropTypes.bool,
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   type: 'text',
+  disabled: false,
   secondary: false,
   ghost: false,
+  small: false,
   onClick: () => {},
 };
 

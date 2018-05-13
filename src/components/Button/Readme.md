@@ -23,3 +23,7 @@
 ```js
 <Button fullWidth>Full-Width Button Text</Button>
 ```
+
+```js
+<Button small>Small Button Text</Button>
+```
