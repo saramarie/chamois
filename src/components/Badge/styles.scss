@@ -1,0 +1,34 @@
+@import '../../sass/typography';
+@import '../../sass/colors';
+
+$statuses: (
+  error: $bg--error,
+  warning: $bg--warning,
+  success: $bg--success,
+  info: $bg--info
+);
+
+@mixin badge-statuses($status) {
+  &--#{$status} {
+    background: map-get($statuses, $status);
+    color: $text--light;
+  }
+}
+
+.Badge {
+  background: $bg--dark;
+  color: $text--light;
+  font-family: $font;
+  font-size: $font-size--small--em;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+
+  // overrides to allow embedding in buttons, etc.
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+
+  @each $status, $bg-color in $statuses {
+    @include badge-statuses($status);
+  }
+}
